@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+    <title>Taxi Service</title>
+</head>
+<body class="home-page">
+
+    <!-- Hero Section with Background Image and Navigation -->
+    <section class="hero">
+        <div class="nav-container">
+            <!-- Company Logo -->
+            <img src="images/logo.png" alt="Taxi Service Logo" class="logo">
+            <!-- Hamburger Icon (visible only on mobile) -->
+            <div class="hamburger" onclick="toggleMenu()">&#9776;</div>
+            
+            <!-- Desktop Navigation Menu (visible on desktop) -->
+            <ul class="desktop-nav">
+                <li><a href="index-en.html">Home</a></li>
+                <li><a href="about-en.html">About Us</a></li>
+                <li><a href="services-en.html">Services</a></li>
+                <li><a href="contact-en.html">Contact</a></li>
+            </ul>
+        </div>
+        <div class="hero-content">
+            <h2>Fast and Reliable Taxi Services</h2>
+            <p>Need a ride? Book a taxi and enjoy safe and quick transportation.</p>
+            <a href="#" class="button book-now-button">Book Now</a>
+
+
+            <!-- Language Selection (Flags) -->
+            <div class="language-selection">
+                <img src="images/En.png" alt="English" class="flag" onclick="changeLanguage('index-en.html')">
+                <img src="images/Fr.png" alt="French" class="flag" onclick="changeLanguage('index-fr.html')">
+                <img src="images/Nl.png" alt="Dutch" class="flag" onclick="changeLanguage('index-nl.html')">
+            </div>
+        </div>
+    </section>
+
+    <!-- Mobile Hamburger Menu -->
+    <nav class="mobile-nav">
+        <!-- Close Icon -->
+        <div class="hamburger close-icon" onclick="toggleMenu()">&#10005;</div>
+        <ul>
+            <li><a href="index-en.html">Home</a></li>
+            <li><a href="about-en.html">About Us</a></li>
+            <li><a href="services-en.html">Services</a></li>
+            <li><a href="contact-en.html">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- Booking Section -->
+    <section class="booking-section" id="bookingSection">
+        <h2>Book Your Taxi Now</h2>
+        <p class="contact-info">For quick booking, contact us at +32 492 80 45 65</p>
+
+        <form id="bookingForm">
+            <input type="text" id="fullName" name="fullName" required placeholder="Full Name">
+            <div class="phone-input">
+                <input type="tel" id="phoneNumber" name="phoneNumber" required placeholder="+32 412 34 56 78">
+            </div>
+            <select id="tripType" name="tripType" required onchange="toggleReturnFields()">
+                <option value="one-way">One-Way</option>
+                <option value="two-way">Two-Way</option>
+            </select>
+            <div class="date-time-group">
+                <div>
+                    <input type="date" id="pickupDate" name="pickupDate" required placeholder="Pick-up Date">
+                </div>
+                <div>
+                    <input type="time" id="pickupTime" name="pickupTime" required placeholder="Pick-up Time">
+                </div>
+            </div>
+            <input type="text" id="pickupAddress" name="pickupAddress" required placeholder="Pick-up Address">
+            <input type="text" id="dropoffAddress" name="dropoffAddress" required placeholder="Drop-off Address">
+            <input type="number" id="passengers" name="passengers" required placeholder="Amount of Passengers" min="1">
+            <div id="returnFields" style="display: none;">
+                <h3>Return Trip Details</h3>
+                <div class="date-time-group">
+                    <div>
+                        <input type="date" id="returnPickupDate" name="returnPickupDate" placeholder="Return Pick-up Date">
+                    </div>
+                    <div>
+                        <input type="time" id="returnPickupTime" name="returnPickupTime" placeholder="Return Pick-up Time">
+                    </div>
+                </div>
+                <input type="text" id="returnPickupAddress" name="returnPickupAddress" placeholder="Return Pick-up Address">
+                <input type="text" id="returnDropoffAddress" name="returnDropoffAddress" placeholder="Return Drop-off Address">
+                <input type="number" id="returnPassengers" name="returnPassengers" placeholder="Return Amount of Passengers" min="1">
+            </div>
+            <textarea id="notes" name="notes" placeholder="Notes (Optional)"></textarea>
+            <button type="submit" class="get-prices-button">Get Your Prices</button>
+        </form>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="contact-details">
+            <h1>Contact Us</h1>
+            <!-- Phone -->
+            <div class="contact-item">
+                <img src="images/phone.png" alt="Phone" class="contact-icon">
+                <a href="tel:+32487991877">+32 487 99 18 77</a>
+            </div>
+
+            <!-- Email -->
+            <div class="contact-item">
+                <img src="images/mail.png" alt="Email" class="contact-icon">
+                <a href="mailto:info.bready2go@gmail.com">info.bready2go@gmail.com</a>
+            </div>
+
+            <!-- BTW Number -->
+            <div class="contact-item">
+                <img src="images/btw.png" alt="BTW Number" class="contact-icon">
+                <span>BTW BE04 88 99 77 77</span>
+            </div>
+        </div>
+        <p>&copy; 2024 Taxi Service</p>
+    </footer>
+
+</body>
+
+<script>
+    function scrollToBooking() {
+        const bookingSection = document.getElementById('bookingSection');
+        bookingSection.scrollIntoView({ behavior: 'smooth' });
+    }
+
+    function toggleMenu() {
+        const nav = document.querySelector('.mobile-nav');
+        const hamburger = document.querySelector('.hamburger');
+
+        nav.classList.toggle('open');
+        hamburger.classList.toggle('open');
+
+        if (hamburger.classList.contains('open')) {
+            hamburger.innerHTML = '&#10005;'; // X icon
+        } else {
+            hamburger.innerHTML = '&#9776;'; // Hamburger icon
+        }
+    }
+
+    function changeLanguage(pageUrl) {
+        window.location.href = pageUrl;
+    }
+
+    function toggleReturnFields() {
+        const tripType = document.getElementById('tripType').value;
+        const returnFields = document.getElementById('returnFields');
+
+        if (tripType === 'two-way') {
+            returnFields.style.display = 'block';
+            document.getElementById('returnPickupDate').required = true;
+            document.getElementById('returnPickupTime').required = true;
+            document.getElementById('returnPickupAddress').required = true;
+            document.getElementById('returnDropoffAddress').required = true;
+            document.getElementById('returnPassengers').required = true;
+        } else {
+            returnFields.style.display = 'none';
+            document.getElementById('returnPickupDate').required = false;
+            document.getElementById('returnPickupTime').required = false;
+            document.getElementById('returnPickupAddress').required = false;
+            document.getElementById('returnDropoffAddress').required = false;
+            document.getElementById('returnPassengers').required = false;
+        }
+    }
+</script>
+
+</html>

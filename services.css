@@ -1,0 +1,71 @@
+/* Services Section */
+.services-section {
+    padding: 50px 20px;
+    background-color: #e3e3e3;
+    text-align: center;
+    height: 100%;
+}
+
+.services-section h2 {
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+    margin-top: 30px;
+    color: #14213d;
+}
+
+.service-cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.additional-info img {
+    width: 100%;
+}
+/* Styling each service card */
+.service-card {
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    padding: 20px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.service-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+}
+
+.service-image {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 5px;
+    margin-bottom: 15px;
+}
+
+.service-card h3 {
+    font-size: 1.4rem;
+    margin-bottom: 10px;
+    color: #14213d;
+}
+
+.service-card p {
+    font-size: 1rem;
+    color: #555;
+    line-height: 1.6;
+}
+
+/* Additional Info Section */
+.additional-info {
+    margin-top: 40px;
+    font-size: 1.2rem;
+    color: #333;
+    line-height: 1.7;
+    max-width: 950px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: left;
+}

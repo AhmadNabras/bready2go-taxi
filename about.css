@@ -1,0 +1,88 @@
+/* About Us Page Styles */
+.about-us-section {
+    background-color: #e5e5e5;
+    padding: 50px 20px;
+    text-align: center;
+}
+
+/* Default container for mobile and tablet (responsive) */
+.about-us-container {
+    width: 100%;
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 0 20px;
+    text-align: left;
+}
+
+/* Ensure that the container has a fixed width of 950px on desktop */
+@media (min-width: 1024px) {
+    .about-us-container {
+        width: 950px; /* Fixed width for desktop */
+        padding: 0;   /* Remove padding on larger screens */
+    }
+}
+
+.about-us-section h1 {
+    font-size: 2.8rem; /* Slightly larger for desktop */
+    margin-top: 30px;
+    margin-bottom: 20px;
+    color: #14213d;
+}
+
+/* Image Styling */
+.about-us-image {
+    width: 100%;
+    max-width: 1000px; /* Limit the width on large screens */
+    height: auto;
+    margin-bottom: 30px;
+    object-fit: cover;
+}
+
+/* Section titles */
+.about-us-container h2 {
+    font-size: 2rem; /* Larger for readability on desktop */
+    color: #333;
+    margin-top: 30px;
+    margin-bottom: 15px;
+}
+
+/* Paragraph text */
+.about-us-container p {
+    font-size: 1.2rem; /* Increased font size */
+    color: #555;
+    line-height: 1.8; /* Improved line spacing for readability */
+    margin-bottom: 20px;
+}
+
+/* List items */
+.about-us-container ul {
+    list-style-type: disc;
+    padding-left: 20px;
+    margin-bottom: 20px;
+}
+
+.about-us-container ul li {
+    font-size: 1.2rem; /* Larger text for desktop */
+    color: #555;
+    line-height: 1.8;
+    margin-bottom: 10px;
+}
+
+/* Footer Styles */
+
+
+/* Media Queries for Desktop Adjustments */
+@media (min-width: 1024px) {
+    .about-us-container h1 {
+        font-size: 3rem; /* Larger title for big screens */
+    }
+
+    .about-us-container p, 
+    .about-us-container ul li {
+        font-size: 1.3rem; /* Make the text a bit bigger for larger screens */
+    }
+
+    .about-us-image {
+        max-width: 900px; /* Keep the image well-sized on large screens */
+    }
+}
