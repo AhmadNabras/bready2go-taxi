@@ -1,113 +1,142 @@
 <!DOCTYPE html>
-<html lang="nl">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <script src="script.js" defer></script>
-    <link rel="stylesheet" href="services.css">
-    <link rel="stylesheet" href="about.css">
-    <title>Taxi Dienst</title>
+    <link rel="stylesheet" href="/style/style.css">
+    <link rel="stylesheet" href="/style/footer.css">
+    <link rel="stylesheet" href="/style/navigation.css">
+    <link rel="stylesheet" href="/style/about.css"> <!-- New CSS for About Us -->
+    <link rel="stylesheet" href="/style/global-banner.css">
+    <script src="/script.js" defer></script>
+    <title>About Us - Taxi Service</title>
 </head>
 <body>
 
-    <!-- Hero Section met Achtergrondafbeelding en Navigatie -->
-    <section class="hero">
-        <div class="nav-container">
-            <!-- Company Logo -->
-            <img src="images/logo.png" alt="Taxi Service Logo" class="logo">
-            <!-- Hamburger Icon (visible only on mobile) -->
-            <div class="hamburger" onclick="toggleMenu()">&#9776;</div>
-            
-            <!-- Desktop Navigation Menu (visible on desktop) -->
-            <ul class="desktop-nav">
+    <!-- Header Section with Navigation -->
+    <header class="header">
+        <div class="logo">
+            <img src="images/logo.png" alt="Taxi Service Logo" class="logo-img">
+        </div>
+        <!-- Hamburger Icon for Mobile/Tablet -->
+        <div class="hamburger" id="hamburger-menu" onclick="toggleMenu()">&#9776;</div>
+
+        <!-- Navigation Menu -->
+        <nav class="navbar" id="navbar">
+            <div class="close-btn" id="close-menu" onclick="toggleMenu()">&times;</div> <!-- "×" close icon -->
+            <ul>
                 <li><a href="index-en.html">Home</a></li>
-                <li><a href="about-en.html">About Us</a></li>
+                <li><a href="about-en.html" class="active">About Us</a></li>
                 <li><a href="services-en.html">Services</a></li>
                 <li><a href="contact-en.html">Contact</a></li>
             </ul>
+            <div class="social-icons">
+                <a href="https://instagram.com" target="_blank" aria-label="Instagram">
+                    <img src="images/instagram.png" alt="Instagram">
+                </a>
+                <a href="tel:+123456789" aria-label="Phone">
+                    <img src="images/phone.png" alt="Phone">
+                </a>
+                <a href="mailto:info@taxi.com" aria-label="Email">
+                    <img src="images/email.png" alt="Email">
+                </a>
+            </div>
+            <div class="language-selector">
+                <a href="index-en.html" class="active">EN</a>
+                <a href="index-nl.html">NL</a>
+                <a href="index-fr.html">FR</a>
+            </div>
+        </nav>
+    </header>
+
+    <!-- About Us Banner Section -->
+    <section class="banner">
+        <img src="/Images/aboutus-img.png" alt="Services Banner" class="banner-image">
+        <div class="banner-content">
+            <h1>About us</h1>
         </div>
     </section>
 
-    <!-- Mobile Hamburger Menu -->
-    <nav class="mobile-nav">
-        <!-- Close Icon -->
-        <div class="hamburger close-icon" onclick="toggleMenu()">&#10005;</div>
-        <ul>
-            <li><a href="index-en.html">Home</a></li>
-            <li><a href="about-en.html">About Us</a></li>
-            <li><a href="services-en.html">Services</a></li>
-            <li><a href="contact-en.html">Contact</a></li>
-        </ul>
-    </nav>
+    <section class="about-content">
+        <p>Welcome to <span>Bready2go</span>, your trusted and reliable taxi service provider in Dilbeek, its deelgemeentes, Asse, Ternat, Aalst, and the surrounding towns. With 8 years of experience in the taxi industry, we pride ourselves on delivering high-quality, dependable, and luxurious transportation services tailored to meet the needs of our valued customers.</p>
+        <div class="about-span">
+            <h2>Why Choose Bready2go</h2>
+            <p><span>Reliability You Can Count On:</span> We understand the importance of being on time. Whether you’re heading to the airport, a business meeting, or a special event, our drivers ensure timely arrivals and departures so you can travel stress-free.</p>
+            <p><span>Committed to Loyalty:</span> Our customers are at the heart of everything we do. At Bready2go, we build lasting relationships based on trust, loyalty, and excellent service. We strive to exceed your expectations every time you ride with us.</p>
+            <p><span>Luxury at Your Fingertips:</span> Travel in style with our range of comfortable and luxurious vehicles. Whether it’s a short trip or a long-distance journey, we make sure your ride is as smooth and enjoyable as possible. Our fleet is well-maintained, ensuring both safety and elegance.</p>
+            <p><span>Punctual and Professional:</span> At Bready2go, we understand that time is precious. That’s why punctuality is one of our top priorities. Our professional drivers are familiar with the best routes and local traffic patterns to ensure you reach your destination on time, every time.</p>
+        </div>
 
-    <!-- About Us Section -->
-    <section class="about-us-section">
-        <h1>About Us</h1>
-        <!-- New Image Added Below H1 -->
-        <img src="images/aboutus-img.jpg" class="about-us-image"> 
+        <h2>Our Service Area</h2>
+        <p>We proudly serve the communities of Dilbeek and its deelgemeentes, as well as Asse, Ternat, Aalst, and nearby towns. Whether you’re traveling locally or need to reach a destination further afield, <span>Bready2go</span> is ready to provide you with prompt, professional, and luxurious taxi services.</p>
+    </section>
 
-        <div class="about-us-container">
-            <p>Welcome to <strong>Bready2go</strong>, your trusted and reliable taxi service provider in <strong>Dilbeek</strong>, its <strong>deelgemeentes</strong>, <strong>Asse</strong>, <strong>Ternat</strong>, <strong>Aalst</strong>, and the surrounding towns. At Bready2go, we pride ourselves on delivering high-quality, dependable, and luxurious transportation services tailored to meet the needs of our valued customers.</p>
+    <section class="slideshow">
+        <div class="slideshow-container">
+            <!-- Slide 1 -->
+            <div class="slide fade">
+                <img src="/Images/background-image.png" alt="Slide 1">
+            </div>
+            <!-- Slide 2 -->
+            <div class="slide fade">
+                <img src="/Images/aboutus-img.jpg" alt="Slide 2">
+            </div>
+            <!-- Slide 3 -->
+            <div class="slide fade">
+                <img src="/Images/aboutus-img.png" alt="Slide 3">
+            </div>
 
-            <h2>Why Choose Bready2go?</h2>
-            
-            <ul>
-                <li><strong>Reliability You Can Count On:</strong> We understand the importance of being on time. Whether you’re heading to the airport, a business meeting, or a special event, our drivers ensure timely arrivals and departures so you can travel stress-free.</li>
-                <li><strong>Committed to Loyalty:</strong> Our customers are at the heart of everything we do. At Bready2go, we build lasting relationships based on trust, loyalty, and excellent service. We strive to exceed your expectations every time you ride with us.</li>
-                <li><strong>Luxury at Your Fingertips:</strong> Travel in style with our range of comfortable and luxurious vehicles. Whether it’s a short trip or a long-distance journey, we make sure your ride is as smooth and enjoyable as possible. Our fleet is well-maintained, ensuring both safety and elegance.</li>
-                <li><strong>Punctual and Professional:</strong> At Bready2go, we understand that time is precious. That’s why punctuality is one of our top priorities. Our professional drivers are familiar with the best routes and local traffic patterns to ensure you reach your destination on time, every time.</li>
-            </ul>
+            <!-- Next and Previous Buttons -->
+            <a class="prev" onclick="changeSlide(-1)">&#10094;</a>
+            <a class="next" onclick="changeSlide(1)">&#10095;</a>
+        </div>
 
-            <h2>Our Service Area</h2>
-            <p>We proudly serve the communities of <strong>Dilbeek</strong> and its deelgemeentes, as well as <strong>Asse</strong>, <strong>Ternat</strong>, <strong>Aalst</strong>, and nearby towns. Whether you’re traveling locally or need to reach a destination further afield, Bready2go is ready to provide you with prompt, professional, and luxurious taxi services.</p>
+        <!-- Dots below the slideshow -->
+        <div class="dots-container">
+            <span class="dot" onclick="currentSlide(1)"></span>
+            <span class="dot" onclick="currentSlide(2)"></span>
+            <span class="dot" onclick="currentSlide(3)"></span>
         </div>
     </section>
 
     <!-- Footer -->
     <footer>
-        <div class="contact-details">
-            <h1>Contact Us</h1>
-            <!-- Phone -->
+        <!-- Top Contact Info -->
+        <div class="footer-contact-top">
             <div class="contact-item">
-                <img src="images/phone.png" alt="Phone" class="contact-icon">
-                <a href="tel:+32487991877">+32 487 99 18 77</a>
+                <img src="images/phone.png" alt="Phone">
+                <p>+32 487 99 18 77</p>
             </div>
-
-            <!-- Email -->
             <div class="contact-item">
-                <img src="images/mail.png" alt="Email" class="contact-icon">
-                <a href="mailto:info.bready2go@gmail.com">info.bready2go@gmail.com</a>
+                <img src="images/email.png" alt="Email">
+                <p>info@bready2go.be</p>
             </div>
-
-            <!-- BTW Number -->
             <div class="contact-item">
-                <img src="images/btw.png" alt="BTW Number" class="contact-icon">
-                <span>BTW BE04 88 99 77 77</span>
+                <img src="images/instagram.png" alt="Instagram">
+                <p>@b-ready2go</p>
             </div>
         </div>
-        <p>&copy; 2024 Taxi Service</p>
+
+        <!-- Divider -->
+        <hr class="footer-divider" />
+
+        <!-- Bottom Section with Navigation -->
+        <div class="footer-bottom">
+            <nav class="footer-links">
+                <a href="index-en.html" class="footer-link">Home</a>
+                <a href="about-en.html" class="footer-link">About Us</a>
+                <a href="services-en.html" class="footer-link">Services</a>
+                <a href="contact-en.html" class="footer-link">Contact Us</a>
+            </nav>
+        </div>
+
+        <!-- Copyright Text -->
+        <p class="footer-copyright">
+            &copy; 2024 Bready2go. All rights reserved.
+        </p>
     </footer>
+    <!-- Link to your JavaScript file -->
+    <script src="/script.js"></script>
+
 </body>
-
-
-<script>
-    function toggleMenu() {
-        const nav = document.querySelector('.mobile-nav');
-        const hamburger = document.querySelector('.hamburger');
-
-        nav.classList.toggle('open');
-        hamburger.classList.toggle('open');
-
-        if (hamburger.classList.contains('open')) {
-            hamburger.innerHTML = '&#10005;'; // X icon
-        } else {
-            hamburger.innerHTML = '&#9776;'; // Hamburger icon
-        }
-    }
-
-    function changeLanguage(pageUrl) {
-        window.location.href = pageUrl;
-    }
-</script>
 </html>

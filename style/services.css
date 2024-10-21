@@ -1,0 +1,217 @@
+
+/* Responsive adjustments for smaller screens */
+@media (max-width: 768px) {
+    .services-banner {
+        height: 200px; /* Smaller height for mobile */
+    }
+
+    .services-banner .banner-content h1 {
+        font-size: 2rem; /* Smaller font size for mobile */
+    }
+}
+
+/* Services Cards */
+.services-cards {
+    padding: 50px 20px;
+    background-color: #ffffff;
+}
+
+.card-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+}
+
+.card {
+    width: 400px;
+    height: 200px;
+    perspective: 1000px;
+}
+
+.card-front, .card-back {
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    background-color: #ffffff;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+    position: absolute;
+    backface-visibility: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: transform 0.6s ease-in-out;
+}
+
+.card-front {
+    background-color: #f0f0f0;
+}
+
+.card-front h2 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+.card-front img {
+    width: 80px;
+    height: auto;
+}
+
+.card-back {
+    background-color: #F3C624;
+    transform: rotateY(180deg);
+    text-align: center;
+    padding: 20px;
+}
+
+.card-back p {
+    font-size: 1.5rem;
+    color: #fff;
+}
+
+.card:hover .card-front {
+    transform: rotateY(180deg);
+}
+
+.card:hover .card-back {
+    transform: rotateY(0deg);
+}
+
+.card-front img {
+    width: 50px;
+    height: 50px;
+}
+
+
+/* Services Text Section */
+.services-text {
+    padding: 40px 20px;
+    max-width: 1000px;
+    margin: 0 auto;
+    text-align: left;
+    font-size: 1rem;
+    line-height: 1.8;
+}
+
+.services-text h2 {
+    font-size: 2rem;
+    color: #14213d; /* Blue color */
+    font-weight: bold;
+    margin-top: 30px;
+    margin-bottom: 15px;
+}
+
+.services-text span {
+    color: red;
+    font-weight: 600; /* Red and semibold for span */
+}
+
+
+/* Mobile Responsive for Cards */
+@media (max-width: 768px) {
+    .card-container {
+        flex-direction: column;
+    }
+
+    .card {
+        width: 100%;
+        height: 300px; /* Increase height for mobile for better spacing */
+    }
+
+    .card-front h2 {
+        font-size: 1.3rem;
+    }
+
+    .card-back p {
+        font-size: 1,5rem;
+    }
+}
+
+
+
+/* Slideshow container */
+.slideshow-container {
+    position: relative;
+    background: #f1f1f1;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Review Slides */
+.slide {
+    display: none;
+    text-align: center;
+    padding: 20px;
+}
+
+q {
+    font-style: italic;
+    font-size: 1.5rem;
+    color: #333;
+}
+
+/* Yellow line under the review text */
+.testimonial-line {
+    width: 50px;
+    height: 4px;
+    background-color: #F3C624;
+    margin: 20px auto;
+    border: none;
+}
+
+/* Client name styling */
+.client-name {
+    font-style: italic;
+    color: #F3C624;
+    font-size: 1.1rem;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 16px;
+    color: #888;
+    font-weight: bold;
+    font-size: 20px;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+    transform: translateY(-50%);
+}
+
+.next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+.prev:hover, .next:hover {
+    background-color: rgba(0,0,0,0.8);
+    color: white;
+}
+
+/* The dot/bullet/indicator container */
+.dots-container {
+    text-align: center;
+    padding: 20px;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+    background-color: #717171;
+}

@@ -1,0 +1,235 @@
+
+/* About Content */
+.about-content {
+    padding: 40px 20px;
+    max-width: 1000px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+.about-content p {
+    font-size: 1rem;
+    line-height: 1.8;
+    margin-bottom: 20px;
+}
+
+.about-content h2 {
+    font-size: 2rem;
+    color: #14213d; /* Blue color */
+    font-weight: bold;
+    margin-top: 40px;
+    margin-bottom: 20px;
+}
+
+/* Red Semibold Text */
+.about-content span {
+    color: red;
+    font-weight: 600;
+}
+
+.about-span span {
+    color: #F3C624; /* Yellow color for highlighted text */
+}
+
+/* Slideshow container */
+.slideshow-container {
+    position: relative;
+    width: 50%;
+    margin: auto;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Slide images */
+.slide {
+    display: none;
+    width: 100%;
+}
+
+.slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Maintain aspect ratio and cover the container */
+}
+
+/* Next and previous buttons */
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 16px;
+    margin-top: -22px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 0 3px 3px 0;
+}
+
+.next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+.prev:hover, .next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Fade animation */
+.fade {
+    animation: fadeEffect 1.5s;
+}
+
+@keyframes fadeEffect {
+    from { opacity: .4 } 
+    to { opacity: 1 }
+}
+
+/* Dots below the slideshow */
+.dots-container {
+    text-align: center;
+    margin-top: 10px;
+}
+
+.dot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #120f0f;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+    background-color: #717171;
+}
+
+/* Responsive design for smaller screens */
+@media (max-width: 768px) {
+    .slideshow-container {
+        width: 90%; /* Increase width for mobile for better visibility */
+    }
+
+    .slide img {
+        object-fit: contain; /* Ensure the full image is visible within the container */
+        height: auto; /* Let height adjust dynamically for mobile */
+    }
+
+    .prev, .next {
+        font-size: 1.5rem; /* Reduce button size for smaller screens */
+    }
+}
+
+/* Services Banner */
+.services-banner {
+    position: relative;
+    width: 100%;
+    height: 30vh; /* Same height as About Us banner */
+    background: url('/Images/aboutus-img.png') no-repeat center center/cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Services Banner Title Styling */
+.services-banner .banner-content h1 {
+    color: #F3C624; /* Yellow color */
+    font-size: 3rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-align: center;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5); /* Text shadow for better readability */
+}
+
+/* Services Cards Section */
+.services-cards {
+    padding: 50px 20px;
+    background-color: #f9f9f9;
+}
+
+.card-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+}
+
+.card {
+    width: 400px;
+    height: 200px;
+    perspective: 1000px;
+}
+
+.card-front, .card-back {
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    background-color: #fff;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+    position: absolute;
+    backface-visibility: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: transform 0.6s ease-in-out;
+}
+
+.card-front {
+    background-color: #f0f0f0;
+}
+
+.card-front h2 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+.card-front img {
+    width: 80px;
+    height: auto;
+}
+
+.card-back {
+    background-color: #F3C624;
+    transform: rotateY(180deg);
+    text-align: center;
+    padding: 20px;
+}
+
+.card-back p {
+    font-size: 1rem;
+    color: #fff;
+}
+
+.card:hover .card-front {
+    transform: rotateY(180deg);
+}
+
+.card:hover .card-back {
+    transform: rotateY(0deg);
+}
+
+.card-front img {
+    width: 50px;
+    height: 50px;
+}
+
+/* Mobile Responsive for Cards */
+@media (max-width: 768px) {
+    .card-container {
+        flex-direction: column;
+    }
+
+    .card {
+        width: 100%;
+        height: 300px;
+    }
+}
+
+

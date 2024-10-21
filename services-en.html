@@ -1,144 +1,217 @@
 <!DOCTYPE html>
-<html lang="nl">
+<html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <script src="script.js" defer></script>
-    <link rel="stylesheet" href="services.css">
-    <title>Taxi Dienst</title>
+    <link rel="stylesheet" href="/style/style.css">
+    <link rel="stylesheet" href="/style/footer.css">
+    <link rel="stylesheet" href="/style/navigation.css">
+    <link rel="stylesheet" href="/style/global-banner.css"> <!-- Global CSS for banner -->
+    <link rel="stylesheet" href="/style/about.css">
+    <link rel="stylesheet" href="/style/services.css"> <!-- New CSS for Services -->
+    <script src="/script.js" defer></script>
+    <title>Services - Taxi Service</title>
 </head>
+
 <body>
 
-    <!-- Hero Section met Achtergrondafbeelding en Navigatie -->
-    <section class="hero">
-        <div class="nav-container">
-            <!-- Company Logo -->
-            <img src="images/logo.png" alt="Taxi Service Logo" class="logo">
-            <!-- Hamburger Icon (visible only on mobile) -->
-            <div class="hamburger" onclick="toggleMenu()">&#9776;</div>
-            
-            <!-- Desktop Navigation Menu (visible on desktop) -->
-            <ul class="desktop-nav">
+    <!-- Header Section with Navigation -->
+    <header class="header">
+        <div class="logo">
+            <img src="images/logo.png" alt="Taxi Service Logo" class="logo-img">
+        </div>
+        <!-- Hamburger Icon for Mobile/Tablet -->
+        <div class="hamburger" id="hamburger-menu" onclick="toggleMenu()">&#9776;</div>
+
+        <!-- Navigation Menu -->
+        <nav class="navbar" id="navbar">
+            <div class="close-btn" id="close-menu" onclick="toggleMenu()">&times;</div> <!-- "×" close icon -->
+            <ul>
                 <li><a href="index-en.html">Home</a></li>
                 <li><a href="about-en.html">About Us</a></li>
-                <li><a href="services-en.html">Services</a></li>
+                <li><a href="services-en.html" class="active">Services</a></li>
                 <li><a href="contact-en.html">Contact</a></li>
             </ul>
+            <div class="social-icons">
+                <a href="https://instagram.com" target="_blank" aria-label="Instagram">
+                    <img src="images/instagram.png" alt="Instagram">
+                </a>
+                <a href="tel:+123456789" aria-label="Phone">
+                    <img src="images/phone.png" alt="Phone">
+                </a>
+                <a href="mailto:info@taxi.com" aria-label="Email">
+                    <img src="images/email.png" alt="Email">
+                </a>
+            </div>
+            <div class="language-selector">
+                <a href="index-en.html" class="active">EN</a>
+                <a href="index-nl.html">NL</a>
+                <a href="index-fr.html">FR</a>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Services Banner Section (same as about us banner) -->
+    <section class="banner">
+        <img src="/Images/aboutus-img.png" alt="Services Banner" class="banner-image">
+        <div class="banner-content">
+            <h1>Our Services</h1>
         </div>
     </section>
 
-    <!-- Mobile Hamburger Menu -->
-    <nav class="mobile-nav">
-        <!-- Close Icon -->
-        <div class="hamburger close-icon" onclick="toggleMenu()">&#10005;</div>
-        <ul>
-            <li><a href="index-en.html">Home</a></li>
-            <li><a href="about-en.html">About Us</a></li>
-            <li><a href="services-en.html">Services</a></li>
-            <li><a href="contact-en.html">Contact</a></li>
-        </ul>
-    </nav>
-
-   <section class="services-section">
-    <h2>Our Services</h2>
-
-    <div class="service-cards">
-        <!-- Service Card 1: Airport Transfers -->
-        <div class="service-card">
-            <img src="Images/airport.jpg" alt="Airport Transfers" class="service-image">
-            <h3>Airport Transfers</h3>
-            <p>Fast and reliable airport transfers, ensuring you arrive at the airport on time or get home comfortably after a flight.</p>
+    <!-- Services Cards Section -->
+    <section class="services-cards">
+        <div class="card-container">
+            <div class="card">
+                <div class="card-front">
+                    <h2>Airport Services</h2>
+                    <img src="/Images/airplane-mode.png" alt="Plane icon">
+                </div>
+                <div class="card-back">
+                    <p>Fast and reliable airport transfers, ensuring you arrive at the airport on time or get home
+                        comfortably after a flight.</p>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-front">
+                    <h2>Local Taxi Rides</h2>
+                    <img src="/Images/location.png" alt="location Icon">
+                </div>
+                <div class="card-back">
+                    <p>Quick and safe transportation for commuting, shopping, or meeting friends around the city.</p>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-front">
+                    <h2>Corporate Taxi Services</h2>
+                    <img src="/Images/suitcase.png" alt="Suitcase Icon">
+                </div>
+                <div class="card-back">
+                    <p>Reliable transportation for executives, employees, and guests with pre-scheduled pickups and
+                        corporate billing.</p>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-front">
+                    <h2>Long-Distance Rides</h2>
+                    <img src="/Images/compass.png" alt="Compass Icon">
+                </div>
+                <div class="card-back">
+                    <p>Comfortable long-distance trips with competitive rates and professional drivers.</p>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-front">
+                    <h2>7-Passenger Van Services</h2>
+                    <img src="/Images/camper-van.png" alt="Van Icon">
+                </div>
+                <div class="card-back">
+                    <p>Spacious van for group transportation, ideal for up to 7 people for outings or trips.</p>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-front">
+                    <h2>VIP & Luxury Taxi Services</h2>
+                    <img src="/Images/diamond.png" alt="Diamond Icon">
+                </div>
+                <div class="card-back">
+                    <p>Travel in style with our luxury vehicles and premium, courteous service.</p>
+                </div>
+            </div>
         </div>
+    </section>
 
-        <!-- Service Card 2: Local Taxi Rides -->
-        <div class="service-card">
-            <img src="images/local-taxi.jpg" alt="Local Taxi Rides" class="service-image">
-            <h3>Local Taxi Rides</h3>
-            <p>Quick and safe transportation for commuting, shopping, or meeting friends around the city.</p>
+    <!-- Services Text Section -->
+    <section class="services-text">
+        <p>At <span>Bready2Go</span>, we provide an array of taxi services designed to cater to your diverse
+            transportation needs. Operating in Dilbeek, Groot-Bijgaarden, Ternat, Asse, Zellik, and neighboring towns,
+            we are dedicated to ensuring you travel comfortably, safely, and on time whether it’s for personal or
+            business purposes.</p>
+
+        <h2>Always here for you!</h2>
+
+        <p>Our services are available 24/7 to ensure that whenever you need reliable transportation,
+            <span>Bready2Go</span> is ready to serve. We take pride in our professionalism, attention to detail, and
+            commitment to customer satisfaction. You can trust us for timely, courteous, and luxurious rides.</p>
+    </section>
+
+
+    <section class="slideshow">
+        <div class="slideshow-container">
+            <!-- Review Slide 1 -->
+            <div class="slide fade">
+                <q>Lorem Ipsum is simply dummy text of the printing and typesetting industry. It has survived not only five centuries.</q>
+                <hr class="testimonial-line">
+                <p class="client-name">- John Doe</p>
+            </div>
+            <!-- Review Slide 2 -->
+            <div class="slide fade">
+                <q>But man is not made for defeat. A man can be destroyed but not defeated.</q>
+                <hr class="testimonial-line">
+                <p class="client-name">- Ernest Hemingway</p>
+            </div>
+            <!-- Review Slide 3 -->
+            <div class="slide fade">
+                <q>I have not failed. I've just found 10,000 ways that won't work.</q>
+                <hr class="testimonial-line">
+                <p class="client-name">- Thomas Edison</p>
+            </div>
+    
+            <!-- Next and Previous Buttons -->
+            <a class="prev" onclick="changeSlide(-1)">&#10094;</a>
+            <a class="next" onclick="changeSlide(1)">&#10095;</a>
         </div>
-
-        <!-- Service Card 3: Corporate Taxi Services -->
-        <div class="service-card">
-            <img src="images/corporate-taxi.jpg" alt="Corporate Taxi Services" class="service-image">
-            <h3>Corporate Taxi Services</h3>
-            <p>Reliable transportation for executives, employees, and guests with pre-scheduled pickups and corporate billing.</p>
+    
+        <!-- Dots below the slideshow -->
+        <div class="dots-container">
+            <span class="dot" onclick="currentSlide(1)"></span>
+            <span class="dot" onclick="currentSlide(2)"></span>
+            <span class="dot" onclick="currentSlide(3)"></span>
         </div>
+    </section>
+    
 
-        <!-- Service Card 4: Long-Distance Rides -->
-        <div class="service-card">
-            <img src="images/long-distance.jpg" alt="Long-Distance Rides" class="service-image">
-            <h3>Long-Distance Rides</h3>
-            <p>Comfortable long-distance trips with competitive rates and professional drivers.</p>
-        </div>
 
-        <!-- Service Card 5: 7-Passenger Van Service -->
-        <div class="service-card">
-            <img src="images/van-service.jpg" alt="7-Passenger Van Service" class="service-image">
-            <h3>7-Passenger Van Service</h3>
-            <p>Spacious van for group transportation, ideal for up to 7 people for outings or trips.</p>
-        </div>
-
-        <!-- Service Card 6: VIP & Luxury Taxi Service -->
-        <div class="service-card">
-            <img src="images/vip-taxi.jpg" alt="VIP & Luxury Taxi Service" class="service-image">
-            <h3>VIP & Luxury Taxi Service</h3>
-            <p>Travel in style with our luxury vehicles and premium, courteous service.</p>
-        </div>
-    </div>
-
-    <!-- Additional Services Information -->
-    <div class="additional-info">
-        <p>At <strong>Bready2Go</strong>, we provide an array of taxi services designed to cater to your diverse transportation needs. Operating in <strong>Dilbeek</strong>, <strong>Groot-Bijgaarden</strong>, <strong>Ternat</strong>, <strong>Asse</strong>, <strong>Zellik</strong>, and neighboring towns, we are dedicated to ensuring you travel comfortably, safely, and on time whether it’s for personal or business purposes.</p>
-        <p><br><strong>Always Here for You:<br></strong> Our services are available 24/7 to ensure that whenever you need reliable transportation, Bready2Go is ready to serve. We take pride in our professionalism, attention to detail, and commitment to customer satisfaction. You can trust us for timely, courteous, and luxurious rides.</p>
-        <img src="Images/aboutus-img.jpg">
-    </div>
-</section>
-
-    <!-- Footer -->
+    <!-- Footer Section -->
     <footer>
-        <div class="contact-details">
-            <h1>Contact Us</h1>
-            <!-- Phone -->
+        <!-- Top Contact Info -->
+        <div class="footer-contact-top">
             <div class="contact-item">
-                <img src="images/phone.png" alt="Phone" class="contact-icon">
-                <a href="tel:+32487991877">+32 487 99 18 77</a>
+                <img src="images/phone.png" alt="Phone">
+                <p>+32 487 99 18 77</p>
             </div>
-
-            <!-- Email -->
             <div class="contact-item">
-                <img src="images/mail.png" alt="Email" class="contact-icon">
-                <a href="mailto:info.bready2go@gmail.com">info.bready2go@gmail.com</a>
+                <img src="images/email.png" alt="Email">
+                <p>info@bready2go.be</p>
             </div>
-
-            <!-- BTW Number -->
             <div class="contact-item">
-                <img src="images/btw.png" alt="BTW Number" class="contact-icon">
-                <span>BTW BE04 88 99 77 77</span>
+                <img src="images/instagram.png" alt="Instagram">
+                <p>@b-ready2go</p>
             </div>
         </div>
-        <p>&copy; 2024 Taxi Service</p>
+
+        <!-- Divider -->
+        <hr class="footer-divider" />
+
+        <!-- Bottom Section with Navigation -->
+        <div class="footer-bottom">
+            <nav class="footer-links">
+                <a href="index-en.html" class="footer-link">Home</a>
+                <a href="about-en.html" class="footer-link">About Us</a>
+                <a href="services-en.html" class="footer-link">Services</a>
+                <a href="contact-en.html" class="footer-link">Contact Us</a>
+            </nav>
+        </div>
+
+        <!-- Copyright Text -->
+        <p class="footer-copyright">
+            &copy; 2024 Bready2go. All rights reserved.
+        </p>
     </footer>
+    <!-- Link to your JavaScript file -->
+    <script src="/script.js"></script>
+
 </body>
-
-<script>
-    function toggleMenu() {
-        const nav = document.querySelector('.mobile-nav');
-        const hamburger = document.querySelector('.hamburger');
-
-        nav.classList.toggle('open');
-        hamburger.classList.toggle('open');
-
-        if (hamburger.classList.contains('open')) {
-            hamburger.innerHTML = '&#10005;'; // X icon
-        } else {
-            hamburger.innerHTML = '&#9776;'; // Hamburger icon
-        }
-    }
-
-    function changeLanguage(pageUrl) {
-        window.location.href = pageUrl;
-    }
-</script>
 
 </html>

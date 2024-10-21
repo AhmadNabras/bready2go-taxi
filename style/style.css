@@ -1,0 +1,193 @@
+
+
+/* Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+html, body {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    font-family: Arial, sans-serif;
+    background-color: #ffffff;
+}
+
+h4 {
+    color: #CC9900;
+}
+
+/* Restrict background image to the home page */
+.home-page .hero {
+    position: relative;
+    height: 100vh;
+    background: url('/Images/background-image.png') no-repeat center center/cover;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+}
+
+/* Hero Content */
+.hero-content h2 {
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+    color: #FCA311;
+}
+
+.hero-content p {
+    font-size: 1rem;
+    margin-bottom: 20px;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+/* Book Now Button */
+.hero-content .button {
+    background-color: #CC9900;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.hero-content .button:hover {
+    background-color: #F3C624;
+}
+/* Booking Info Message */
+.booking-info {
+    font-size: 1rem;
+    color: #333;  /* Darker text color for readability */
+    text-align: center;
+    margin: 20px 0;
+    line-height: 1.5;
+    padding: 0 10px; /* Add padding for smaller screens */
+    max-width: 600px; /* Restrict width for better readability */
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Booking Section */
+.booking-section {
+    padding: 40px 20px;
+    background-color: #f9f9f9;
+    text-align: center;
+}
+
+.booking-section h2 {
+    margin-top: 50px;
+    font-size: 2rem;
+    color: #14213d;
+}
+
+/* Contact Info */
+.contact-info {
+    font-size: 1rem;
+    color: #ff0000;
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+form {
+    max-width: 500px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+/* Input fields */
+input, select, textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+/* Align date and time fields in a row */
+.date-time-group {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+textarea {
+    height: 100px;
+}
+
+/* Submit Button */
+button.get-prices-button {
+    background-color: #CC9900;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    width: 100%;
+}
+
+button.get-prices-button:hover {
+    background-color: #F3C624;
+}
+
+/* Safety and Convenience Section */
+.safety-convenience-section {
+    padding: 50px 20px;
+    background-color: #f0f0f0;
+    text-align: center;
+}
+
+.safety-convenience-section h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #14213d;
+}
+
+.safety-convenience-section p {
+    font-size: 1.2rem;
+    color: #555;
+    margin-bottom: 30px;
+    line-height: 1.8;
+}
+
+/* Image Gallery Styling */
+.image-gallery {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.image-gallery img {
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Media Query: Stack images vertically on mobile */
+@media (max-width: 768px) {
+    .image-gallery {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .image-gallery img {
+        max-width: 100%;
+        margin-bottom: 20px;
+    }
+}
+
+
+
